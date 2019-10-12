@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>search</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta property="og:title" content="searchin">
+        <meta property="og:url" content="">
+        <meta property="og:image" content="">
+        <meta property="og:description" content="найди всё что захочешь!">
+        <meta property="og:site_name" content="">
+        <meta property="og:type" content="website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("/stylesheets/css/style.css")">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&amp;subset=latin,cyrillic-ext,cyrillic" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <div class="page page--search">
+            <div class="container container--search">
+
+
+                <form role="search" method="GET" class="search-form search-form--search">
+                    <div class="search-form__search">
+                        <input type="text" name="query" tabindex="1" placeholder="Поиск..." required class="search-form__search-field">
+                    </div>
+                    <div class="search-form__button">
+                            <button type="submit" class="search-form__button-send">Search</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </body>
+        <!--// build:js(dev/../) js/vendor.min.js-->
+        <!--script(src="bower_components/jquery/dist/jquery.js")-->
+        <!--// endbuild-->
+        <!--// build:js(dev/) js/script.min.js-->
+        <!--script(src="js/script.js")-->
+        <!--// endbuild-->
+</html>
+    <!---->
+@import views.html.helper.form
+@import akka.routing.Routees

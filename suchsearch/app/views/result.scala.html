@@ -1,0 +1,97 @@
+@import model.Page
+@(query: String, result: List[Page], userId: String)
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>result</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="searchin">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="найди всё что захочешь!">
+    <meta property="og:site_name" content="">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("/stylesheets/css/style.css")">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700&amp;subset=latin,cyrillic-ext,cyrillic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      function urlChangeHandler(element) {
+        event.preventDefault();
+
+        var url = element.getAttribute("href");
+        var query = element.getAttribute("tag");
+        var wordsCount = element.getAttribute("count");
+        var userId = element.getAttribute("user");
+
+        var xhr = new XMLHttpRequest();
+
+        var body = 'url=' + encodeURIComponent(url) +
+                '&query=' + encodeURIComponent(query) + '&count=' + encodeURIComponent(wordsCount) + '&userUnID=' + encodeURIComponent(userId);
+
+        xhr.open("POST", '/log', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {//Call a function when the state changes.
+
+        };
+        xhr.send(body);
+
+        window.open(url, this);
+
+//        event.run();
+
+//        location.href = url;
+      }
+    </script>
+
+
+    <div class="page page--result-search">
+      <form role="search" method="GET" class="search-form search-form--result-search">
+        <div class="search-form__search">
+          <input value="@query" type="text" name="query" tabindex="1" placeholder="Поиск..." required class="search-form__search-field">
+        </div>
+        <div class="search-form__button">
+          <button type="submit" class="search-form__button-send">Search</button>
+        </div>
+      </form>
+
+      <div class="container container--result-search">
+
+        @for(page <- result) {
+          <div class="result-block">
+            <h3 class="result-block__header"><a href="@page.url"  tag="@query" count="@page.wordsCount" user="@userId" class="result-block__header-link" style="color: blue; font-size: 1.5em;"
+            onclick="urlChangeHandler(this)">@page.title</a></h3>
+            <div class="result-block__find">
+              <div class="result-block__description">
+                <div class="result-block__cite-block">
+                  <cite class="result-block__cite" style="color: forestgreen">@page.url</cite>
+                </div>
+                <div class="result-block__text-block" style="color: #767676">
+                  <p>
+                    @page.pageContent
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+
+      </div>
+    </div>
+  </body>
+  <!--// build:js(dev/../) js/vendor.min.js-->
+  <!--script(src="bower_components/jquery/dist/jquery.js")-->
+  <!--// endbuild-->
+  <!--// build:js(dev/) js/script.min.js-->
+  <!--script(src="js/script.js")-->
+  <!--// endbuild-->
+</html>
