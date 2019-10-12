@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id="crawler:test" external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="GRADLE" external.system.module.group="com.ravilgub" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../build/classes/kotlin/test" />
+          <option name="classpath" value="$MODULE_DIR$/../../build/classes/kotlin/main:/Users/ravil/.gradle/caches/modules-2/files-2.1/com.beust/klaxon/5.0.1/4c1ffe12cd890eef021808dfb2fe2993dfeaf0c9/klaxon-5.0.1.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.2.60/33af8b35817e4c97a477a6a324032e0591d04f36/kotlin-reflect-1.2.60.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.31/11289d20fd95ae219333f3456072be9f081c30cc/kotlin-stdlib-1.3.31.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/com.rabbitmq/amqp-client/5.7.1/747f54e5a70dfc5037a5695c0611dbfa72fe410c/amqp-client-5.7.1.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/com.github.kittinunf.fuel/fuel/2.1.0/cc9e3388c19ae349c714ddfe44532ef57e24cc56/fuel-2.1.0.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver/3.8.1/115885a2430245e13a440ebc2e178ddce2822f8d/mongodb-driver-3.8.1.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.31/20c34a04ea25cb1ef0139598bd67c764562cb170/kotlin-stdlib-common-1.3.31.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/77100a62c2e6f04b53977b9f541044d7d722693d/slf4j-api-1.7.26.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/com.github.kittinunf.result/result/2.2.0/a757a3097fe0a738465df95b449ae18ed1344687/result-2.2.0.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.mongodb/mongodb-driver-core/3.8.1/ca7672fad39304433ae08780ca5f90aae5842fb6/mongodb-driver-core-3.8.1.jar:/Users/ravil/.gradle/caches/modules-2/files-2.1/org.mongodb/bson/3.8.1/8385a746a3824826494ddafa64c8e220872cfce/bson-3.8.1.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="crawler" />
+          <option name="friendPaths">
+            <array>
+              <option value="$MODULE_DIR$/../../build/classes/kotlin/main" />
+              <option value="$MODULE_DIR$/../../build/classes/java/main" />
+            </array>
+          </option>
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output-test url="file://$MODULE_DIR$/../../out/test/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../src/test/resources" type="java-test-resource" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="crawler_main" />
+    <orderEntry type="library" name="Gradle: com.beust:klaxon:5.0.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-reflect:1.2.60" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.31" level="project" />
+    <orderEntry type="library" name="Gradle: com.rabbitmq:amqp-client:5.7.1" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.kittinunf.fuel:fuel:2.1.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.mongodb:mongodb-driver:3.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.31" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.26" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.kittinunf.result:result:2.2.0" level="project" />
+    <orderEntry type="library" name="Gradle: org.mongodb:mongodb-driver-core:3.8.1" level="project" />
+    <orderEntry type="library" name="Gradle: org.mongodb:bson:3.8.1" level="project" />
+  </component>
+  <component name="TestModuleProperties" production-module="crawler_main" />
+</module>
